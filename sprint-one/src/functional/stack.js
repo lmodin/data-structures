@@ -15,7 +15,7 @@ var Stack = function() {
 
   someInstance.pop = function() {
     var length = Object.keys(storage).length;
-    var last = Object.keys(storage)[length - 1]
+    var last = Object.keys(storage)[length - 1];
     var value = storage[last];
     delete storage[last];
     return value;
