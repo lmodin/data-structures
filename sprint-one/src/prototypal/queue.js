@@ -3,7 +3,7 @@ var Queue = function() {
   // but try not not reference your old code in writing the new style.
   var newQueue = Object.create(queueMethods);
   newQueue.storage = {};
-  return newQueue
+  return newQueue;
 };
 
 var queueMethods = {};
@@ -12,7 +12,7 @@ queueMethods.enqueue = function(value) {
   var defaultKey = Object.keys(this.storage).length;
   while(this.storage[defaultKey] !== undefined) {
     defaultKey ++;
-  };
+  }
   this.storage[defaultKey] = value;
 };
 
