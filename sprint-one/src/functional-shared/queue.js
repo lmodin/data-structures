@@ -12,9 +12,9 @@ var Queue = function() {
 var queueMethods = {};
 
 queueMethods.enqueue = function(value) {
-  var defaultKey = Object.keys(this.storage).length
+  var defaultKey = Object.keys(this.storage).length;
   while (this.storage[defaultKey] !== undefined) {
-    defaultKey++;
+    defaultKey ++;
   }
   this.storage[defaultKey] = value
 }
