@@ -6,7 +6,7 @@ var Queue = function() {
 
 Queue.prototype.enqueue = function(value) {
   var thisKey = Object.keys(this.storage).length;
-  while(this.storage[thisKey] !== undefined) {
+  while (this.storage[thisKey] !== undefined) {
     thisKey ++;
   }
   this.storage[thisKey] = value;
