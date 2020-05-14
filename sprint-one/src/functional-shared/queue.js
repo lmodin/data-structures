@@ -16,19 +16,19 @@ queueMethods.enqueue = function(value) {
   while (this.storage[defaultKey] !== undefined) {
     defaultKey ++;
   }
-  this.storage[defaultKey] = value
-}
+  this.storage[defaultKey] = value;
+};
 
 queueMethods.dequeue = function() {
   var first = Object.keys(this.storage)[0];
   var value = this.storage[first];
   delete this.storage[first];
   return value;
-}
+};
 
 queueMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
 
 

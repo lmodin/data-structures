@@ -16,16 +16,16 @@ stackMethods.push = function(value) {
     defaultKey++;
   }
   this.storage[defaultKey] = value;
-}
+};
 
 stackMethods.pop = function() {
   var last = Object.keys(this.storage)[Object.keys(this.storage).length - 1];
   var value = this.storage[last];
   delete this.storage[last];
   return value;
-}
+};
 
 stackMethods.size = function() {
   return Object.keys(this.storage).length;
-}
+};
 
