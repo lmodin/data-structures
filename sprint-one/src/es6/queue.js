@@ -9,7 +9,7 @@ class Queue {
     var thisKey = Object.keys(this.storage).length;
     while (this.storage[thisKey] !== undefined) {
       thisKey ++;
-    }
+    };
     this.storage[thisKey] = value;
   };
 
