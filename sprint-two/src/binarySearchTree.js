@@ -16,7 +16,7 @@ binaryMethods.insert = function(value) {
     //check if right is undefined
     if (this.right === null) {
       //if it is, create new node there
-      this.right = Binary(value);
+      this.right = BinarySearchTree(value);
     } else { //if not, repeat search/tests with the node there
       this.right.insert(value);
     }
@@ -24,7 +24,7 @@ binaryMethods.insert = function(value) {
   //if lower than node, go left and repeat
     if (this.left === null) {
       //if it is, create new node there
-      this.left = Binary(value);
+      this.left = BinarySearchTree(value);
     } else {
       //if not, repeat search/tests with the node there
       this.left.insert(value);
@@ -69,18 +69,6 @@ binaryMethods.depthFirstLog = function(callback) {
 
 };
 
-
-//create a node creater that takes in a value and returns the new node
-var Binary = function(value) {
-  var node = {};
-
-  node.value = value;
-  node.left = null;
-  node.right = null;
-  _.extend(node, binaryMethods);
-
-  return node;
-};
 
 
 /*
