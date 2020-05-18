@@ -24,4 +24,10 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('should print values of the set', function() {
+    set.add('Susan Sarandon');
+    set.add('Danny Glover');
+    expect(set.display(set)).to.eql(['Susan Sarandon','Danny Glover']);
+  });
+
 });
