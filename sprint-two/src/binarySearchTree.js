@@ -1,7 +1,7 @@
 var BinarySearchTree = function(value) {
   var tree = {};
   tree.value = value;
-  tree.left = null;//can do null or false i think
+  tree.left = null;
   tree.right = null;
 
   _.extend(tree, binaryMethods);
@@ -69,6 +69,13 @@ binaryMethods.depthFirstLog = function(callback) {
 
 };
 
+binaryMethods.minValue = function() {
+  if (!this.left) {
+    return this.value;
+  } else if (this.left) {
+    return this.left.minValue();
+  }
+};
 
 
 /*
