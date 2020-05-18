@@ -8,7 +8,6 @@ var Graph = function() {
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
   //include an object where we can add edges
-
   this.nodes[node] = {};
 
 };
@@ -54,8 +53,8 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
 
-  this.nodes[fromNode][toNode]= true;
-  this.nodes[toNode][fromNode]=true;
+  this.nodes[fromNode][toNode] = true;
+  this.nodes[toNode][fromNode] = true;
 };
 
 // Remove an edge between any two specified (by value) nodes.
@@ -70,8 +69,17 @@ Graph.prototype.forEachNode = function(cb) {
   //iterate through the nodes
   //call cb on each node.
 
-  for(var key in this.nodes){
+  for (var key in this.nodes){
     cb(key);
+  }
+};
+
+Graph.prototype.display = function(node) {
+  if (this.nodes[node]) {
+    console.log(this.nodes[node]);
+    return (this.nodes[node]);
+  } else {
+    return undefined;
   }
 };
 

@@ -68,4 +68,10 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+
+  it('should display the node that is passed in', function() {
+    graph.addNode(1);
+    expect(graph.display(1)).to.equal(graph.nodes[1]);
+  });
 });
