@@ -5,7 +5,7 @@ var LinkedList = function() {
 
   list.addToTail = function(value) {
     node = Node(value);
-
+    this.value = value;
     if (!list.head) {
       list.head = node;
     } else {
@@ -22,6 +22,14 @@ var LinkedList = function() {
 
     list.head = list.head.next;
     return saveValue;
+  };
+
+  list.display = function(node) {
+    if (this.value = node) {
+      return this;
+    } else {
+      this.display(this.tail);
+    }
   };
 
   list.contains = function(target) {
